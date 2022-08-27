@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-cream);
+  min-height: 100vh;
+  line-height: 1.1;
+  font-family: var(--font1);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+P {
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 1rem);
+}
+
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-darker-cyan: hsl(158, 61%, 20%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-dark-blue: hsl(212, 21%, 14%);
+  --clr-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+  --font1:"Montserrat", sans-serif;
+  --font2: "Fraunces", serif;
+  --weight-norm: 500;
+  --weight-bold: 700;
+}
+
+@media (min-width: 375px) {
+  #main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .wrapper__img {
+    height: 100%;
+  }
+}
+.container {
+  background-color: var(--clr-white);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: min(100%, 800px);
+}
+
+.wrapper__img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.text {
+  width: 90%;
+  margin-inline: auto;
+  padding: 20px;
+}
+.text__small {
+  font-size: 1rem;
+  font-family: var(--font2);
+  letter-spacing: 0.5rem;
+  font-weight: var(--weight-norm);
+  color: var(--clr-grayish-blue);
+}
+.text__heading {
+  font-weight: var(--weight-bold);
+  font-size: clamp(3rem, 3vw + 1.5rem, 3.25rem);
+  line-height: 1;
+}
+.text__para {
+  font-size: 1.25rem;
+  font-weight: var(--weight-norm);
+  color: var(--clr-grayish-blue);
+}
+.text__num {
+  font-size: 3rem;
+  font-family: var(--font1);
+  color: var(--clr-dark-cyan);
+}
+.text__num span {
+  display: inline-block;
+  font-weight: var(--weight-norm);
+  font-size: 1.25rem;
+  text-decoration: line-through;
+  color: var(--clr-grayish-blue);
+}
+.text__btn {
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  width: 100%;
+  border: transparent;
+  border-radius: 10px;
+  padding: 16px;
+}
+.text__btn:hover, .text__btn:focus, .text__btn:active {
+  background-color: var(--clr-darker-cyan);
+}
+.text__btn img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.text__btn span {
+  font-size: inherit;
+  margin-left: 5px;
+}/*# sourceMappingURL=style.css.map */

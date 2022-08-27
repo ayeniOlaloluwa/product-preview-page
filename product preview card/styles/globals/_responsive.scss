@@ -1,0 +1,13 @@
+//mobile view - 375px
+//desktop view - 1440px
+
+@media (min-width: 375px) {
+    #main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .wrapper__img {
+        height: 100%;
+    }
+}
